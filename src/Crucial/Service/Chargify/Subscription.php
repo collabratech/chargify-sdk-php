@@ -35,6 +35,38 @@ class Subscription extends AbstractEntity
     }
 
     /**
+     * The API Handle of the price point for which you are creating a subscription
+     * or migrating to.
+     *
+     * @param string $handle
+     *
+     * @return Subscription
+     */
+    public function setProductPricePointHandle($handle)
+    {
+        $this->setParam('product_price_point_handle', $handle);
+
+        return $this;
+    }
+
+    /**
+     * The API Handle of the price point for which you are creating a subscription
+     * or migrating to.
+     *
+     * @param string $handle
+     *
+     * @return Subscription
+     */
+    public function setProductPricePointId($handle)
+    {
+        $this->setParam('product_price_point_id', $handle);
+
+        return $this;
+    }
+
+
+    
+    /**
      * The ID of the Product that the subscription will migrate to.
      *
      * @param string|int $id
