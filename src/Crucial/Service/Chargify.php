@@ -35,6 +35,7 @@ use Crucial\Service\Chargify\Refund;
 use Crucial\Service\Chargify\Statement;
 use Crucial\Service\Chargify\Stats;
 use Crucial\Service\Chargify\Subscription;
+use Crucial\Service\Chargify\Offer;
 use Crucial\Service\Chargify\Transaction;
 use Crucial\Service\Chargify\Webhook;
 
@@ -234,6 +235,17 @@ class Chargify
     {
         return new Subscription($this);
     }
+
+    /**
+     * Helper for instantiating an instance of Offer
+     *
+     * @return Offer
+     */
+    public function offer()
+    {
+        return new Offer($this);
+    }
+
 
     /**
      * Helper for instantiating an instance of Product
